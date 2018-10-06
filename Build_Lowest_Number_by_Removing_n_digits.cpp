@@ -22,9 +22,13 @@ string buildLowestNumber(string num, int k)
             count--;
         }
      
-        string temp(str.begin(), str.end());
-        //cout<<endl<<temp<<endl;
-        return temp;
+        itr = str.begin();
+        while((itr != str.end()) && (*itr == '0'))
+            str.erase(itr);
+        if(str.empty())
+            return "0";
+        else 
+        return string(str.begin(), str.end());
     
 } 
 
